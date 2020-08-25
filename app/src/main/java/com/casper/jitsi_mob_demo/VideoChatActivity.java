@@ -20,7 +20,7 @@ import java.util.Map;
 
 public class VideoChatActivity extends FragmentActivity implements JitsiMeetActivityInterface, JitsiMeetViewListener {
 
-    private String roomName;
+    private String roomName,username;
     private JitsiMeetView jitsiMeetView;
 
     @Override
@@ -62,6 +62,7 @@ public class VideoChatActivity extends FragmentActivity implements JitsiMeetActi
     void getDataFromIntent(){
         Intent mainActivityIntent = getIntent();
         roomName = mainActivityIntent.getStringExtra(Constants.ROOM_NAME);
+        username = mainActivityIntent.getStringExtra(Constants.USERNAME);
     }
 
     private JitsiMeetConferenceOptions getVideoChatOptions(){
@@ -73,7 +74,7 @@ public class VideoChatActivity extends FragmentActivity implements JitsiMeetActi
         }
 
         JitsiMeetUserInfo meetUserInfo = new JitsiMeetUserInfo();
-        meetUserInfo.setDisplayName("Mobile App User");
+        meetUserInfo.setDisplayName(username);
 
         return  new JitsiMeetConferenceOptions.Builder()
                 .setServerURL(VIDEO_CHAT_HOST)
@@ -81,8 +82,8 @@ public class VideoChatActivity extends FragmentActivity implements JitsiMeetActi
                 .setFeatureFlag("chat.enabled",false)
                 .setVideoMuted(false)
                 .setUserInfo(meetUserInfo)
-                .setSubject("SAMPLE ROOM")//Set call subject here. use to display phone number here.
-                .setRoom("helloall")
+                .setSubject(roomName)//Set call subject here. use to display phone number here.
+                .setRoom(roomName)
                 .build();
     }
 

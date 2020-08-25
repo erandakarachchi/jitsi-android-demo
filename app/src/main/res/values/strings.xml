@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">jitsi-mob-demo</string>
+    <string name="app_name">Meety</string>
+    <string name="et_hint_enter_room_name">Enter a Room Name</string>
+    <string name="et_hint_enter_user_name">Enter a User Name</string>
 </resources>

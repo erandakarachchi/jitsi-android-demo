@@ -22,16 +22,35 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
+        android:padding="5dp"
         android:id="@+id/etRoomName"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:ems="10"
+        android:hint="@string/et_hint_enter_room_name"
+        android:background="@drawable/custom_edittext"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/btnJoinRoom"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etRoomUserName"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/custom_edittext"
+        android:ems="10"
+        android:hint="@string/et_hint_enter_user_name"
+        android:padding="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/etRoomName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
@@ -39,7 +58,7 @@
         android:layout_width="wrap_content"
         android:layout_height="300dp"
         android:layout_marginTop="32dp"
-        app:layout_constraintBottom_toTopOf="@+id/etRoomName"
+        app:layout_constraintBottom_toTopOf="@+id/etRoomUserName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"

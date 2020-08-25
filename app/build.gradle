@@ -35,4 +35,6 @@ dependencies {
 
     implementation ('org.jitsi.react:jitsi-meet-sdk:2.9.3') { transitive = true }
 
+    implementation 'com.pranavpandey.android:dynamic-toasts:3.2.0'
+
 }
