@@ -45,6 +45,9 @@ public class MainActivity extends AppCompatActivity {
                     videoChatActivityIntent.putExtra(Constants.ROOM_NAME,roomName);
                     videoChatActivityIntent.putExtra(Constants.USERNAME,username);
                     startActivity(videoChatActivityIntent);
+
+                    etRoomName.setText("");
+                    etUserName.setText("");
                 }
 
             }
